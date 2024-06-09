@@ -32,7 +32,7 @@ public partial class @DduRInput: IInputActionCollection2, IDisposable
                     ""name"": ""Tab"",
                     ""type"": ""Button"",
                     ""id"": ""19406341-77c6-4131-97a1-14881203d5f7"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Hold(duration=0.1,pressPoint=0.2)"",
                     ""initialStateCheck"": false
