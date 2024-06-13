@@ -1230,6 +1230,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputManager: {fileID: 867398040}
   _camTransform: {fileID: 330585546}
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2056091359
 GameObject:
   m_ObjectHideFlags: 0
