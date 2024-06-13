@@ -13,30 +13,58 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
    
     private bool begin = false;
+    public SpaceObject CurrentObject { get; private set; }
 
+    private Ray _ray;
     private void Start()
     {
         _camController = new CameraController(_camTransform,_inputManager);
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-       // phase = _inputManager.CurrentPhase;
+        phase = _inputManager.CurrentPhase;
        _camController.Update();
+
+       if (phase == TouchPhases.None || _inputManager.IsUITouched)
+           return;
+        SetNoItem();
+       
+    
+    }
+
+    private void SetNoItem()
+    {
+        if (CurrentObject)
+        {
+            int layerMask = ~ignoreLayer.value;
+            RaycastHit hit;
+            var ray = Camera.main.ScreenPointToRay(_inputManager.Pos);
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity , layerMask))
+            {
+                SetMoveObject(CurrentObject,hit.point);
+            }
+        }
+        RaycastHit _hit;
         switch (_inputManager.CurrentPhase)
         {
             case TouchPhases.None:
             {
-                
+            
             }
                 break;
             case TouchPhases.Began:
             {
-                if (begin)
-                    return;
-                begin = true;
-                Debug.Log("Yes Began");
+                var camRay = Camera.main.ScreenPointToRay(_inputManager.Pos);
+                if (Physics.Raycast(camRay, out _hit, 5000))
+                {
+                    Debug.Log(_hit.collider.name);
+                    CurrentObject = _hit.collider.GetComponent<SpaceObject>();
+                    Debug.Log("Set Object");
+                }
+               
             }
                 break;
             case TouchPhases.Held:
@@ -44,7 +72,21 @@ public class Test : MonoBehaviour
                 Debug.Log("Yes HOLD");
             }
                 break;
-   
+            case TouchPhases.Ended:
+            {
+                CurrentObject = null;
+                break;
+            }
         }
+    }
+
+    public LayerMask ignoreLayer;
+
+ 
+    
+
+    private void SetMoveObject(SpaceObject obj, Vector3 pos)
+    {
+        obj.transform.position = pos;
     }
 }

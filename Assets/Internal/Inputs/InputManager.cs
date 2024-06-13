@@ -106,7 +106,7 @@ public class InputManager : MonoBehaviour
         CurrentPhase = TouchPhases.None;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (!IsTouchOrClickActive())
         {
@@ -328,6 +328,7 @@ private void OnRightTabCanceled(InputAction.CallbackContext context)
            
         if(CurrentPhase != phase)
             CurrentPhase = phase;
+
     }
 
     private void SpecialChange(TouchPhases phase)
