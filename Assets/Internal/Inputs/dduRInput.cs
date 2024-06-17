@@ -68,7 +68,7 @@ public partial class @DduRInput: IInputActionCollection2, IDisposable
                     ""name"": ""Special"",
                     ""type"": ""Button"",
                     ""id"": ""87b39cf7-cfd7-4340-bc77-1ea376dbc030"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -104,7 +104,7 @@ public partial class @DduRInput: IInputActionCollection2, IDisposable
                     ""name"": ""Keys"",
                     ""type"": ""Button"",
                     ""id"": ""5f8aa0a9-1ce3-4020-8f6b-c33caed9e4a1"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false

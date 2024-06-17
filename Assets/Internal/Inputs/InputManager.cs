@@ -49,8 +49,6 @@ public class InputManager : MonoBehaviour
 
     private DduRInput dduRInput;
 
-    private Vector2 _lastPos;
-
     public InputAction movement;
     
     public RaycastHit rayhit { get; private set; }
@@ -311,7 +309,8 @@ private void OnRightTabCanceled(InputAction.CallbackContext context)
 
        // Debug.Log(key);
         var keyToEnum = StringToEnum<KeyState>(key);
-        
+
+        OnKeyboardListener?.Invoke(phase, key);
         OnKeyboardState?.Invoke(keyToEnum,phase);
     }
 
@@ -327,7 +326,11 @@ private void OnRightTabCanceled(InputAction.CallbackContext context)
         }
            
         if(CurrentPhase != phase)
+        {
             CurrentPhase = phase;
+            Debug.Log(CurrentPhase);
+        }
+          
 
     }
 

@@ -26,7 +26,6 @@ public class CameraController
     
     //use to track and maintain velocity w/o a rigidbody
     private Vector3 _horizontalVelocity;
-    private Vector3 _lastPosition;
     
     //dragging action started
     private Vector3 _startDrag = Vector3.zero;

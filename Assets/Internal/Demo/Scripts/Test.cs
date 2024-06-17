@@ -60,16 +60,13 @@ public class Test : MonoBehaviour
                 var camRay = Camera.main.ScreenPointToRay(_inputManager.Pos);
                 if (Physics.Raycast(camRay, out _hit, 5000))
                 {
-                    Debug.Log(_hit.collider.name);
                     CurrentObject = _hit.collider.GetComponent<SpaceObject>();
-                    Debug.Log("Set Object");
                 }
                
             }
                 break;
             case TouchPhases.Held:
             {
-                Debug.Log("Yes HOLD");
             }
                 break;
             case TouchPhases.Ended:
