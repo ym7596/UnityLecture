@@ -1,0 +1,20 @@
+[
+  {
+    "id": "Building_1",
+    "category": "Buildings",
+    "bundleData": {
+      "bundleId": "Building_1",
+      "thumbnailId": "Building_1",
+      "path": "Building_1"
+    }
+  },
+  {
+    "id": "Box_1",
+    "category": "Boxes",
+    "bundleData": {
+      "bundleId": "Box_1",
+      "thumbnailId": "Box_1",
+      "path": "Box_1"
+    }
+  }
+]
