@@ -13,4 +13,756 @@ MonoBehaviour:
   m_Name: spaceDataSO
   m_EditorClassIdentifier: 
   textAsset: {fileID: 4900000, guid: ec598f45399e7784d9fe06d2b3eea47a, type: 3}
-  interiorModels: []
+  interiorModels:
+  - id: Building_1
+    category: Buildings
+    bundleData:
+      bundleId: Building_1
+      thumbnailId: Building_1
+      bundleKey: 
+      assetKey: []
+      path: Building_1
+  - id: Building_2
+    category: Boxes
+    bundleData:
+      bundleId: Building_2
+      thumbnailId: Building_2
+      bundleKey: Building_2
+      assetKey: []
+      path: Building_2
+  - id: Building_3
+    category: Boxes
+    bundleData:
+      bundleId: Building_3
+      thumbnailId: Building_3
+      bundleKey: Building_3
+      assetKey: []
+      path: Building_3
+  - id: Building_4
+    category: Boxes
+    bundleData:
+      bundleId: Building_4
+      thumbnailId: Building_4
+      bundleKey: 
+      assetKey: []
+      path: Building_4
+  - id: Building_5
+    category: Boxes
+    bundleData:
+      bundleId: Building_5
+      thumbnailId: Building_5
+      bundleKey: Building_5
+      assetKey: []
+      path: Building_5
+  - id: Building_6
+    category: Boxes
+    bundleData:
+      bundleId: Building_6
+      thumbnailId: Building_6
+      bundleKey: Building_6
+      assetKey: []
+      path: Building_6
+  - id: Building_7
+    category: Boxes
+    bundleData:
+      bundleId: Building_7
+      thumbnailId: Building_7
+      bundleKey: Building_7
+      assetKey: []
+      path: Building_7
+  - id: Building_8
+    category: Boxes
+    bundleData:
+      bundleId: Building_8
+      thumbnailId: Building_8
+      bundleKey: Building_8
+      assetKey: []
+      path: Building_8
+  - id: Building_9
+    category: Boxes
+    bundleData:
+      bundleId: Building_9
+      thumbnailId: Building_9
+      bundleKey: Building_9
+      assetKey: []
+      path: Building_9
+  - id: Box_1
+    category: Boxes
+    bundleData:
+      bundleId: Box_1
+      thumbnailId: Box_1
+      bundleKey: Box_1
+      assetKey: []
+      path: Box_1
+  - id: Box_2
+    category: Boxes
+    bundleData:
+      bundleId: Box_2
+      thumbnailId: Box_2
+      bundleKey: Box_2
+      assetKey: []
+      path: Box_2
+  - id: Box_3
+    category: Boxes
+    bundleData:
+      bundleId: Box_3
+      thumbnailId: Box_3
+      bundleKey: Box_3
+      assetKey: []
+      path: Box_3
+  - id: Box_4
+    category: Boxes
+    bundleData:
+      bundleId: Box_4
+      thumbnailId: Box_4
+      bundleKey: Box_4
+      assetKey: []
+      path: Box_4
+  - id: Barrier
+    category: Other
+    bundleData:
+      bundleId: Barrier
+      thumbnailId: Barrier
+      bundleKey: Barrier
+      assetKey: []
+      path: Barrier
+  - id: BusStop
+    category: Other
+    bundleData:
+      bundleId: BusStop
+      thumbnailId: BusStop
+      bundleKey: BusStop
+      assetKey: []
+      path: BusStop
+  - id: Cone
+    category: Other
+    bundleData:
+      bundleId: Cone
+      thumbnailId: Cone
+      bundleKey: Cone
+      assetKey: []
+      path: Cone
+  - id: Fence
+    category: Other
+    bundleData:
+      bundleId: Fence
+      thumbnailId: Fence
+      bundleKey: Fence
+      assetKey: []
+      path: Fence
+  - id: Fuel_Barrel
+    category: Other
+    bundleData:
+      bundleId: Fuel_Barrel
+      thumbnailId: Fuel_Barrel
+      bundleKey: Fuel_Barrel
+      assetKey: []
+      path: Fuel_Barrel
+  - id: Hot_Dog
+    category: Other
+    bundleData:
+      bundleId: Hot_Dog
+      thumbnailId: Hot_Dog
+      bundleKey: Hot_Dog
+      assetKey: []
+      path: Hot_Dog
+  - id: Hydrant
+    category: Other
+    bundleData:
+      bundleId: Hydrant
+      thumbnailId: Hydrant
+      bundleKey: Hydrant
+      assetKey: []
+      path: Hydrant
+  - id: Newspaper_Stand
+    category: Other
+    bundleData:
+      bundleId: Newspaper_Stand
+      thumbnailId: Newspaper_Stand
+      bundleKey: Newspaper_Stand
+      assetKey: []
+      path: Newspaper_Stand
+  - id: Road_Barrier
+    category: Other
+    bundleData:
+      bundleId: Road_Barrier
+      thumbnailId: Road_Barrier
+      bundleKey: Road_Barrier
+      assetKey: []
+      path: Road_Barrier
+  - id: Tram_Stop
+    category: Other
+    bundleData:
+      bundleId: Tram_Stop
+      thumbnailId: Tram_Stop
+      bundleKey: Tram_Stop
+      assetKey: []
+      path: Tram_Stop
+  - id: Trash_Bag_1
+    category: Other
+    bundleData:
+      bundleId: Trash_Bag_1
+      thumbnailId: Trash_Bag_1
+      bundleKey: Trash_Bag_1
+      assetKey: []
+      path: Trash_Bag_1
+  - id: Trash_Bag_2
+    category: Other
+    bundleData:
+      bundleId: Trash_Bag_2
+      thumbnailId: Trash_Bag_2
+      bundleKey: Trash_Bag_2
+      assetKey: []
+      path: Trash_Bag_2
+  - id: Trash_Bag_3
+    category: Other
+    bundleData:
+      bundleId: Trash_Bag_3
+      thumbnailId: Trash_Bag_3
+      bundleKey: Trash_Bag_3
+      assetKey: []
+      path: Trash_Bag_3
+  - id: Trash_Big
+    category: Other
+    bundleData:
+      bundleId: Trash_Big
+      thumbnailId: Trash_Big
+      bundleKey: Trash_Big
+      assetKey: []
+      path: Trash_Big
+  - id: Trash_Small
+    category: Other
+    bundleData:
+      bundleId: Trash_Small
+      thumbnailId: Trash_Small
+      bundleKey: Trash_Small
+      assetKey: []
+      path: Trash_Small
+  - id: Tree_1
+    category: Other
+    bundleData:
+      bundleId: Tree_1
+      thumbnailId: Tree_1
+      bundleKey: Tree_1
+      assetKey: []
+      path: Tree_1
+  - id: Tree_2
+    category: Other
+    bundleData:
+      bundleId: Tree_2
+      thumbnailId: Tree_2
+      bundleKey: Tree_2
+      assetKey: []
+      path: Tree_2
+  - id: Big_Road_Sing_1
+    category: Road_Signs
+    bundleData:
+      bundleId: Big_Road_Sing_1
+      thumbnailId: Big_Road_Sing_1
+      bundleKey: Big_Road_Sing_1
+      assetKey: []
+      path: Big_Road_Sing_1
+  - id: Big_Road_Sing_2
+    category: Road_Signs
+    bundleData:
+      bundleId: Big_Road_Sing_2
+      thumbnailId: Big_Road_Sing_2
+      bundleKey: Big_Road_Sing_2
+      assetKey: []
+      path: Big_Road_Sing_2
+  - id: Light
+    category: Road_Signs
+    bundleData:
+      bundleId: Light
+      thumbnailId: Light
+      bundleKey: Light
+      assetKey: []
+      path: Light
+  - id: Road_Sign_1
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Sign_1
+      thumbnailId: Road_Sign_1
+      bundleKey: Road_Sign_1
+      assetKey: []
+      path: Road_Sign_1
+  - id: Road_Sign_2
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Sign_2
+      thumbnailId: Road_Sign_2
+      bundleKey: Road_Sign_2
+      assetKey: []
+      path: Road_Sign_2
+  - id: Road_Sign_3
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Sign_3
+      thumbnailId: Road_Sign_3
+      bundleKey: Road_Sign_3
+      assetKey: []
+      path: Road_Sign_3
+  - id: Road_Sign_4
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Sign_4
+      thumbnailId: Road_Sign_4
+      bundleKey: Road_Sign_4
+      assetKey: []
+      path: Road_Sign_4
+  - id: Road_Sign_5
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Sign_5
+      thumbnailId: Road_Sign_5
+      bundleKey: Road_Sign_5
+      assetKey: []
+      path: Road_Sign_5
+  - id: Road_Sign_6
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Sign_6
+      thumbnailId: Road_Sign_6
+      bundleKey: Road_Sign_6
+      assetKey: []
+      path: Road_Sign_6
+  - id: Road_Sign_7
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Sign_7
+      thumbnailId: Road_Sign_7
+      bundleKey: Road_Sign_7
+      assetKey: []
+      path: Road_Sign_7
+  - id: Road_Work_Sign_1
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Work_Sign_1
+      thumbnailId: Road_Work_Sign_1
+      bundleKey: Road_Work_Sign_1
+      assetKey: []
+      path: Road_Work_Sign_1
+  - id: Road_Work_Sign_2
+    category: Road_Signs
+    bundleData:
+      bundleId: Road_Work_Sign_2
+      thumbnailId: Road_Work_Sign_2
+      bundleKey: Road_Work_Sign_2
+      assetKey: []
+      path: Road_Work_Sign_2
+  - id: Traffic_Light_1
+    category: Road_Signs
+    bundleData:
+      bundleId: Traffic_Light_1
+      thumbnailId: Traffic_Light_1
+      bundleKey: Traffic_Light_1
+      assetKey: []
+      path: Traffic_Light_1
+  - id: Traffic_Light_2
+    category: Road_Signs
+    bundleData:
+      bundleId: Traffic_Light_2
+      thumbnailId: Traffic_Light_2
+      bundleKey: Traffic_Light_2
+      assetKey: []
+      path: Traffic_Light_2
+  - id: Road_1
+    category: Roads
+    bundleData:
+      bundleId: Road_1
+      thumbnailId: Road_1
+      bundleKey: Road_1
+      assetKey: []
+      path: Road_1
+  - id: Road_2
+    category: Roads
+    bundleData:
+      bundleId: Road_2
+      thumbnailId: Road_2
+      bundleKey: Road_2
+      assetKey: []
+      path: Road_2
+  - id: Road_3
+    category: Roads
+    bundleData:
+      bundleId: Road_3
+      thumbnailId: Road_3
+      bundleKey: Road_3
+      assetKey: []
+      path: Road_3
+  - id: Road_Crossroads_1
+    category: Roads
+    bundleData:
+      bundleId: Road_Crossroads_1
+      thumbnailId: Road_Crossroads_1
+      bundleKey: Road_Crossroads_1
+      assetKey: []
+      path: Road_Crossroads_1
+  - id: Road_Crossroads_2
+    category: Roads
+    bundleData:
+      bundleId: Road_Crossroads_2
+      thumbnailId: Road_Crossroads_2
+      bundleKey: Road_Crossroads_2
+      assetKey: []
+      path: Road_Crossroads_2
+  - id: Road_Crossroads_3
+    category: Roads
+    bundleData:
+      bundleId: Road_Crossroads_3
+      thumbnailId: Road_Crossroads_3
+      bundleKey: Road_Crossroads_3
+      assetKey: []
+      path: Road_Crossroads_3
+  - id: Road_Crossroads_4
+    category: Roads
+    bundleData:
+      bundleId: Road_Crossroads_4
+      thumbnailId: Road_Crossroads_4
+      bundleKey: Road_Crossroads_4
+      assetKey: []
+      path: Road_Crossroads_4
+  - id: Road_Crosswalk
+    category: Roads
+    bundleData:
+      bundleId: Road_Crosswalk
+      thumbnailId: Road_Crosswalk
+      bundleKey: Road_Crosswalk
+      assetKey: []
+      path: Road_Crosswalk
+  - id: Road_Manhole_1
+    category: Roads
+    bundleData:
+      bundleId: Road_Manhole_1
+      thumbnailId: Road_Manhole_1
+      bundleKey: Road_Manhole_1
+      assetKey: []
+      path: Road_Manhole_1
+  - id: Road_Manhole_2
+    category: Roads
+    bundleData:
+      bundleId: Road_Manhole_2
+      thumbnailId: Road_Manhole_2
+      bundleKey: Road_Manhole_2
+      assetKey: []
+      path: Road_Manhole_2
+  - id: Road_Railroad_1
+    category: Roads
+    bundleData:
+      bundleId: Road_Railroad_1
+      thumbnailId: Road_Railroad_1
+      bundleKey: Road_Railroad_1
+      assetKey: []
+      path: Road_Railroad_1
+  - id: Road_Railroad_2
+    category: Roads
+    bundleData:
+      bundleId: Road_Railroad_2
+      thumbnailId: Road_Railroad_2
+      bundleKey: Road_Railroad_2
+      assetKey: []
+      path: Road_Railroad_2
+  - id: Road_Roadworks
+    category: Roads
+    bundleData:
+      bundleId: Road_Roadworks
+      thumbnailId: Road_Roadworks
+      bundleKey: Road_Roadworks
+      assetKey: []
+      path: Road_Roadworks
+  - id: Road_Stopline_1
+    category: Roads
+    bundleData:
+      bundleId: Road_Stopline_1
+      thumbnailId: Road_Stopline_1
+      bundleKey: Road_Stopline_1
+      assetKey: []
+      path: Road_Stopline_1
+  - id: Road_Stopline_2
+    category: Roads
+    bundleData:
+      bundleId: Road_Stopline_2
+      thumbnailId: Road_Stopline_2
+      bundleKey: Road_Stopline_2
+      assetKey: []
+      path: Road_Stopline_2
+  - id: Bus_1
+    category: Vehicles
+    bundleData:
+      bundleId: Bus_1
+      thumbnailId: Bus_1
+      bundleKey: Bus_1
+      assetKey: []
+      path: Bus_1
+  - id: Bus_2
+    category: Vehicles
+    bundleData:
+      bundleId: Bus_2
+      thumbnailId: Bus_2
+      bundleKey: Bus_2
+      assetKey: []
+      path: Bus_2
+  - id: Bus_3
+    category: Vehicles
+    bundleData:
+      bundleId: Bus_3
+      thumbnailId: Bus_3
+      bundleKey: Bus_3
+      assetKey: []
+      path: Bus_3
+  - id: Car_1_1
+    category: Vehicles
+    bundleData:
+      bundleId: Car_1_1
+      thumbnailId: Car_1_1
+      bundleKey: Car_1_1
+      assetKey: []
+      path: Car_1_1
+  - id: Car_1_2
+    category: Vehicles
+    bundleData:
+      bundleId: Car_1_2
+      thumbnailId: Car_1_2
+      bundleKey: Car_1_2
+      assetKey: []
+      path: Car_1_2
+  - id: Car_1_3
+    category: Vehicles
+    bundleData:
+      bundleId: Car_1_3
+      thumbnailId: Car_1_3
+      bundleKey: Car_1_3
+      assetKey: []
+      path: Car_1_3
+  - id: Car_2_1
+    category: Vehicles
+    bundleData:
+      bundleId: Car_2_1
+      thumbnailId: Car_2_1
+      bundleKey: Car_2_1
+      assetKey: []
+      path: Car_2_1
+  - id: Car_2_2
+    category: Vehicles
+    bundleData:
+      bundleId: Car_2_2
+      thumbnailId: Car_2_2
+      bundleKey: Car_2_2
+      assetKey: []
+      path: Car_2_2
+  - id: Car_2_3
+    category: Vehicles
+    bundleData:
+      bundleId: Car_2_3
+      thumbnailId: Car_2_3
+      bundleKey: Car_2_3
+      assetKey: []
+      path: Car_2_3
+  - id: Car_3_1
+    category: Vehicles
+    bundleData:
+      bundleId: Car_3_1
+      thumbnailId: Car_3_1
+      bundleKey: Car_3_1
+      assetKey: []
+      path: Car_3_1
+  - id: Car_3_2
+    category: Vehicles
+    bundleData:
+      bundleId: Car_3_2
+      thumbnailId: Car_3_2
+      bundleKey: Car_3_2
+      assetKey: []
+      path: Car_3_2
+  - id: Car_3_3
+    category: Vehicles
+    bundleData:
+      bundleId: Car_3_3
+      thumbnailId: Car_3_3
+      bundleKey: Car_3_3
+      assetKey: []
+      path: Car_3_3
+  - id: Ambulance
+    category: Vehicles
+    bundleData:
+      bundleId: Ambulance
+      thumbnailId: Ambulance
+      bundleKey: Ambulance
+      assetKey: []
+      path: Ambulance
+  - id: Bulldozer
+    category: Vehicles
+    bundleData:
+      bundleId: Bulldozer
+      thumbnailId: Bulldozer
+      bundleKey: Bulldozer
+      assetKey: []
+      path: Bulldozer
+  - id: Excavator
+    category: Vehicles
+    bundleData:
+      bundleId: Excavator
+      thumbnailId: Excavator
+      bundleKey: Excavator
+      assetKey: []
+      path: Excavator
+  - id: Fire_Truck
+    category: Vehicles
+    bundleData:
+      bundleId: Fire_Truck
+      thumbnailId: Fire_Truck
+      bundleKey: Fire_Truck
+      assetKey: []
+      path: Fire_Truck
+  - id: Gas_Truck
+    category: Vehicles
+    bundleData:
+      bundleId: Gas_Truck
+      thumbnailId: Gas_Truck
+      bundleKey: Gas_Truck
+      assetKey: []
+      path: Gas_Truck
+  - id: Police
+    category: Vehicles
+    bundleData:
+      bundleId: Police
+      thumbnailId: Police
+      bundleKey: Police
+      assetKey: []
+      path: Police
+  - id: Taxi
+    category: Vehicles
+    bundleData:
+      bundleId: Taxi
+      thumbnailId: Taxi
+      bundleKey: Taxi
+      assetKey: []
+      path: Taxi
+  - id: Main_Truck_1
+    category: Vehicles
+    bundleData:
+      bundleId: Main_Truck_1
+      thumbnailId: Main_Truck_1
+      bundleKey: Main_Truck_1
+      assetKey: []
+      path: Main_Truck_1
+  - id: Main_Truck_2
+    category: Vehicles
+    bundleData:
+      bundleId: Main_Truck_2
+      thumbnailId: Main_Truck_2
+      bundleKey: Main_Truck_2
+      assetKey: []
+      path: Main_Truck_2
+  - id: Main_Truck_3
+    category: Vehicles
+    bundleData:
+      bundleId: Main_Truck_3
+      thumbnailId: Main_Truck_3
+      bundleKey: Main_Truck_3
+      assetKey: []
+      path: Main_Truck_3
+  - id: Main_Truck_4
+    category: Vehicles
+    bundleData:
+      bundleId: Main_Truck_4
+      thumbnailId: Main_Truck_4
+      bundleKey: Main_Truck_4
+      assetKey: []
+      path: Main_Truck_4
+  - id: Pickup_1
+    category: Vehicles
+    bundleData:
+      bundleId: Pickup_1
+      thumbnailId: Pickup_1
+      bundleKey: Pickup_1
+      assetKey: []
+      path: Pickup_1
+  - id: Pickup_2
+    category: Vehicles
+    bundleData:
+      bundleId: Pickup_2
+      thumbnailId: Pickup_2
+      bundleKey: Pickup_2
+      assetKey: []
+      path: Pickup_2
+  - id: Pickup_3
+    category: Vehicles
+    bundleData:
+      bundleId: Pickup_3
+      thumbnailId: Pickup_3
+      bundleKey: Pickup_3
+      assetKey: []
+      path: Pickup_3
+  - id: Train
+    category: Vehicles
+    bundleData:
+      bundleId: Train
+      thumbnailId: Train
+      bundleKey: Train
+      assetKey: []
+      path: Train
+  - id: Train_Carriage
+    category: Vehicles
+    bundleData:
+      bundleId: Train_Carriage
+      thumbnailId: Train_Carriage
+      bundleKey: Train_Carriage
+      assetKey: []
+      path: Train_Carriage
+  - id: Tram_1
+    category: Vehicles
+    bundleData:
+      bundleId: Tram_1
+      thumbnailId: Tram_1
+      bundleKey: Tram_1
+      assetKey: []
+      path: Tram_1
+  - id: Tram_2
+    category: Vehicles
+    bundleData:
+      bundleId: Tram_2
+      thumbnailId: Tram_2
+      bundleKey: Tram_2
+      assetKey: []
+      path: Tram_2
+  - id: Tram_3
+    category: Vehicles
+    bundleData:
+      bundleId: Tram_3
+      thumbnailId: Tram_3
+      bundleKey: Tram_3
+      assetKey: []
+      path: Tram_3
+  - id: Tram_4
+    category: Vehicles
+    bundleData:
+      bundleId: Tram_4
+      thumbnailId: Tram_4
+      bundleKey: Tram_4
+      assetKey: []
+      path: Tram_4
+  - id: Truck_1
+    category: Vehicles
+    bundleData:
+      bundleId: Truck_1
+      thumbnailId: Truck_1
+      bundleKey: Truck_1
+      assetKey: []
+      path: Truck_1
+  - id: Truck_2
+    category: Vehicles
+    bundleData:
+      bundleId: Truck_2
+      thumbnailId: Truck_2
+      bundleKey: Truck_2
+      assetKey: []
+      path: Truck_2
+  - id: Truck_3
+    category: Vehicles
+    bundleData:
+      bundleId: Truck_3
+      thumbnailId: Truck_3
+      bundleKey: Truck_3
+      assetKey: []
+      path: Truck_3

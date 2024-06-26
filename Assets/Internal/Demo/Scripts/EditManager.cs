@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour
+public class EditManager : MonoBehaviour
 {
     [SerializeField]  private InputManager _inputManager;
     [SerializeField] private Transform _camTransform;

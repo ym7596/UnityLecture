@@ -10,21 +10,17 @@ public class BundleData
 {
     public string bundleId="";
     public string thumbnailId="";
+    public string bundleKey;
+    public List<string> assetKey;
     public string path = "";
-
-    public BundleData(JObject json)
-    {
-        Debug.Log(json.ToString());
-        bundleId = json[nameof(bundleId)].ToString();
-        thumbnailId = json[nameof(thumbnailId)].ToString();
-        path = json[nameof(path)].ToString();
-    }
-
+    
     [JsonConstructor]
-    public BundleData(string bundleId, string thumbnailId, string path) { 
+    public BundleData(string bundleId, string thumbnailId, string path,string bundleKey,List<string> assetKey) { 
         this.bundleId = bundleId;
         this.thumbnailId = thumbnailId;
         this.path = path;
+        this.bundleKey = bundleKey;
+        this.assetKey = assetKey;
     }
 
     public string ToJson()
