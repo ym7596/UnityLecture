@@ -985,14 +985,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1790785532}
         m_TargetAssemblyTypeName: EditManager, Assembly-CSharp
-        m_MethodName: RequestObject
+        m_MethodName: TestRequest
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Ambulance
+          m_StringArgument: Bulldozer
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &871868647
@@ -1369,6 +1369,7 @@ MonoBehaviour:
   _inputManager: {fileID: 867398040}
   _camTransform: {fileID: 330585546}
   _bundleLoader: {fileID: 104289942}
+  _spaceObjectDataSO: {fileID: 11400000, guid: 4e4afb888da1a1842814f4f65dde69a9, type: 2}
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -1608,7 +1609,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1790785532}
         m_TargetAssemblyTypeName: EditManager, Assembly-CSharp
-        m_MethodName: RequestObject
+        m_MethodName: TestRequest
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

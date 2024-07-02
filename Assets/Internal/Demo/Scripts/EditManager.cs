@@ -9,6 +9,8 @@ public class EditManager : MonoBehaviour
     [SerializeField] private Transform _camTransform;
     [SerializeField] private BundleLoader _bundleLoader;
 
+    [SerializeField] private SpaceObjectDataSO _spaceObjectDataSO;
+
     private CameraController _camController;
     private TouchPhases phase;
     // Start is called before the first frame update
@@ -102,6 +104,25 @@ public class EditManager : MonoBehaviour
                 go.AddComponent<SpaceObject>();
             }
         });
+    }
+
+    public void TestRequest(string id)
+    {
+        BundleData bundle = _spaceObjectDataSO.interiorModels.Find(x => x.id == id).bundleData;
+        RequestObject(bundle);
+    }
+
+    private void RequestObject(BundleData bundle)
+    {
+        _bundleLoader.GetAssetBundle(bundle.bundleId, (result, data) =>
+         {
+             if (result)
+             {
+                 var go = Instantiate(data, Vector3.zero, Quaternion.identity);
+                 go.layer = LayerMask.NameToLayer(Config.itemLayer);
+                 go.AddComponent<SpaceObject>();
+             }
+         });
     }
 
    
