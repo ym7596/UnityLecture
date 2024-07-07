@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
+    private TransferInteriorData _transferInteriorData;
     private Dictionary<int, IObject> _objectDic;
     // Start is called before the first frame update
     void Start()

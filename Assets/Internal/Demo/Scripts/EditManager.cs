@@ -7,7 +7,7 @@ public class EditManager : MonoBehaviour
 {
     [SerializeField]  private InputManager _inputManager;
     [SerializeField] private Transform _camTransform;
-    [SerializeField] private BundleLoader _bundleLoader;
+    private BundleLoader _bundleLoader;
 
     [SerializeField] private SpaceObjectDataSO _spaceObjectDataSO;
 
@@ -16,14 +16,40 @@ public class EditManager : MonoBehaviour
     // Start is called before the first frame update
    
     private bool begin = false;
+    private int _index = 0;
+    
     public LayerMask ignoreLayer;
 
+    private SpaceObject _currentObject;
+    public SpaceObject CurrentObject 
+    {
+        get
+        {
 
-    public SpaceObject CurrentObject { get; private set; }
+        return _currentObject; 
+        }
+        
+        private set
+        {
+            if(value == null)
+            {
+                
+                _currentObject?.SetSelect(false);
+                _currentObject = value;
+            }
+            else
+            {
+                _currentObject = value;
+                _currentObject.SetSelect(true);
+            }
+        } 
+    
+    }
 
     private Ray _ray;
     private void Start()
     {
+        _bundleLoader = new BundleLoader();
         _camController = new CameraController(_camTransform,_inputManager);
     }
     
@@ -33,12 +59,12 @@ public class EditManager : MonoBehaviour
     {
         phase = _inputManager.CurrentPhase;
        _camController.Update();
-
+        Ray ray = Camera.main.ScreenPointToRay(_inputManager.Pos);
         if (CurrentObject)
         {
             int layerMask = ~ignoreLayer.value;
             RaycastHit hit;
-            var ray = Camera.main.ScreenPointToRay(_inputManager.Pos);
+           
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask(Config.groundLayer)))
             {
                 SetMoveObject(CurrentObject, hit.point);
@@ -46,16 +72,15 @@ public class EditManager : MonoBehaviour
         }
        if (phase == TouchPhases.None || _inputManager.IsUITouched)
            return;
-        SetNoItem();
+        SetNoItem(ray);
        
     
     }
 
-    private void SetNoItem()
+    private void SetNoItem(Ray ray)
     {
-       
         RaycastHit _hit;
-        var camRay = Camera.main.ScreenPointToRay(_inputManager.Pos);
+       // var camRay = Camera.main.ScreenPointToRay(_inputManager.Pos);
         switch (_inputManager.CurrentPhase)
         {
             case TouchPhases.None:
@@ -80,47 +105,37 @@ public class EditManager : MonoBehaviour
                     CurrentObject = null;
                 }
                 else
-                {
-                       
-                    if (Physics.Raycast(camRay, out _hit, 5000))
+                {   
+                    if (Physics.Raycast(ray, out _hit, 5000))
                     {
                         CurrentObject = _hit.collider.GetComponent<SpaceObject>();
                     }
-                       
                 }
                 break;
             }
         }
     }
 
-    public void RequestObject(string url)
-    {
-        _bundleLoader.GetAssetBundle(url, (result, data) =>
-        {
-            if (result)
-            {
-                var go = Instantiate(data, Vector3.zero, Quaternion.identity);
-                go.layer = LayerMask.NameToLayer( Config.itemLayer);
-                go.AddComponent<SpaceObject>();
-            }
-        });
-    }
-
+   
     public void TestRequest(string id)
     {
-        BundleData bundle = _spaceObjectDataSO.interiorModels.Find(x => x.id == id).bundleData;
-        RequestObject(bundle);
+        InteriorModel model = _spaceObjectDataSO.interiorModels.Find(x => x.id == id);
+        
+        RequestObject(model);
     }
 
-    private void RequestObject(BundleData bundle)
+    private void RequestObject(InteriorModel model)
     {
-        _bundleLoader.GetAssetBundle(bundle.bundleId, (result, data) =>
+        _bundleLoader.GetAssetBundle(model.bundleData.bundleId, (result, data) =>
          {
              if (result)
              {
                  var go = Instantiate(data, Vector3.zero, Quaternion.identity);
                  go.layer = LayerMask.NameToLayer(Config.itemLayer);
-                 go.AddComponent<SpaceObject>();
+                 var so = go.AddComponent<SpaceObject>();
+                
+                so.SetData(model.bundleData.bundleId, model.category, _index);
+                 _index++;
              }
          });
     }

@@ -2,29 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceObject : ObjectRoot, IObject
+public class SpaceObject : MonoBehaviour
 {
-    
+    private string id;
+    private string category;
+    private int index;
+
+    private Material _material;
     // Start is called before the first frame update
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
+        _material = GetComponent<MeshRenderer>().material;
     }
 
-
-    public int GetIndex()
+    public void SetData(string id, string category, int index)
     {
-        return index;
+        this.id = id;
+        this.category = category;
+        this.index = index;
     }
-
-    public GameObject GetObject()
+   
+    public void SetSelect(bool isSelect)
     {
-        return this.gameObject;
-    }
-
-    public void SetSelect()
-    {
-        
+        if (isSelect)
+            _material.color = Color.green;
+        else _material.color = Color.white;
     }
 
  

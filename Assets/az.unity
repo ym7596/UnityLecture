@@ -332,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputManager: {fileID: 1505779856}
   _camTransform: {fileID: 961739753}
+  _spaceObjectDataSO: {fileID: 11400000, guid: 4e4afb888da1a1842814f4f65dde69a9, type: 2}
   ignoreLayer:
     serializedVersion: 2
     m_Bits: 64
@@ -347,7 +348,7 @@ GameObject:
   - component: {fileID: 330627248}
   - component: {fileID: 330627247}
   - component: {fileID: 330627246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,16 +604,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 182421000}
-        m_TargetAssemblyTypeName: ResourceManager, Assembly-CSharp
-        m_MethodName: RequestObject
+      - m_Target: {fileID: 243097218}
+        m_TargetAssemblyTypeName: EditManager, Assembly-CSharp
+        m_MethodName: TestRequest
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Building_1
+          m_StringArgument: Ambulance
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &567225058
@@ -1038,16 +1039,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 182421000}
-        m_TargetAssemblyTypeName: ResourceManager, Assembly-CSharp
-        m_MethodName: RequestObject
+      - m_Target: {fileID: 243097218}
+        m_TargetAssemblyTypeName: EditManager, Assembly-CSharp
+        m_MethodName: TestRequest
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Box_1
+          m_StringArgument: Barrier
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1244150568
