@@ -9,6 +9,10 @@ public class SpaceObject : MonoBehaviour
     private int index;
 
     private Material _material;
+
+    public string ID => id;
+    public int Index => index;
+    public string Category => category;
     // Start is called before the first frame update
     private void Start()
     {

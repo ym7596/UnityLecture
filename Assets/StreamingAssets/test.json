@@ -1,0 +1,26 @@
+{
+  "spaceId": "",
+  "interiorDataList": [
+    {
+      "bundleId": "Ambulance",
+      "index": 0,
+      "transformData": {
+        "position": {
+          "x": 29.0,
+          "y": 0.0,
+          "z": -8.0
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        }
+      }
+    }
+  ]
+}

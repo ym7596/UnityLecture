@@ -11,7 +11,9 @@ public class EditManager : MonoBehaviour
 
     [SerializeField] private SpaceObjectDataSO _spaceObjectDataSO;
 
+    private TransferInteriorData _transferInteriorData;
     private CameraController _camController;
+    private SaveManager _saveManager;
     private TouchPhases phase;
     // Start is called before the first frame update
    
@@ -49,6 +51,8 @@ public class EditManager : MonoBehaviour
     private Ray _ray;
     private void Start()
     {
+        _transferInteriorData = new TransferInteriorData();
+        _saveManager = new SaveManager();
         _bundleLoader = new BundleLoader();
         _camController = new CameraController(_camTransform,_inputManager);
     }
@@ -68,6 +72,7 @@ public class EditManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask(Config.groundLayer)))
             {
                 SetMoveObject(CurrentObject, hit.point);
+               
             }
         }
        if (phase == TouchPhases.None || _inputManager.IsUITouched)
@@ -102,7 +107,8 @@ public class EditManager : MonoBehaviour
             {
                 if (CurrentObject)
                 {
-                    CurrentObject = null;
+                        _transferInteriorData.UpdateTransformTarget(CurrentObject);
+                        CurrentObject = null;
                 }
                 else
                 {   
@@ -135,6 +141,7 @@ public class EditManager : MonoBehaviour
                  var so = go.AddComponent<SpaceObject>();
                 
                 so.SetData(model.bundleData.bundleId, model.category, _index);
+                 _transferInteriorData.Add(so);
                  _index++;
              }
          });
@@ -158,5 +165,10 @@ public class EditManager : MonoBehaviour
     private float RoundNearestGrid(float f)
     {
         return Mathf.Round(f / Config.gridSize) * Config.gridSize;
+    }
+
+    public void SetSave()
+    {
+        _saveManager.Save(_transferInteriorData);
     }
 }
