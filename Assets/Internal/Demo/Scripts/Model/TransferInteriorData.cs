@@ -26,7 +26,7 @@ public class TransferInteriorData
     public void Remove(SpaceObject obj)
     {
         interiorDataList.Remove(interiorDataList.Find(x => x.index == obj.Index));
-
+        
     }
 
     public void UpdateTransformTarget(SpaceObject obj)

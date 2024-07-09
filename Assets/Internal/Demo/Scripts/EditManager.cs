@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EditMode
+{
+    Move,
+    Rotate,
+    Scale
+}
 public class EditManager : MonoBehaviour
 {
     [SerializeField]  private InputManager _inputManager;
@@ -15,6 +21,7 @@ public class EditManager : MonoBehaviour
     private CameraController _camController;
     private SaveManager _saveManager;
     private TouchPhases phase;
+    private EditMode _editMode = EditMode.Move;
     // Start is called before the first frame update
    
     private bool begin = false;
@@ -64,15 +71,13 @@ public class EditManager : MonoBehaviour
         phase = _inputManager.CurrentPhase;
        _camController.Update();
         Ray ray = Camera.main.ScreenPointToRay(_inputManager.Pos);
-        if (CurrentObject)
+        if (CurrentObject && _editMode == EditMode.Move)
         {
-            int layerMask = ~ignoreLayer.value;
             RaycastHit hit;
-           
+
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask(Config.groundLayer)))
             {
                 SetMoveObject(CurrentObject, hit.point);
-               
             }
         }
        if (phase == TouchPhases.None || _inputManager.IsUITouched)
@@ -81,6 +86,7 @@ public class EditManager : MonoBehaviour
        
     
     }
+
 
     private void SetNoItem(Ray ray)
     {
@@ -147,8 +153,26 @@ public class EditManager : MonoBehaviour
          });
     }
 
+    public void SetRemove()
+    {
+        if (CurrentObject == null)
+            return;
+        _transferInteriorData.Remove(CurrentObject);
+        DestroyImmediate(CurrentObject.gameObject);
+    }
+
+    public void SetEditMode(int mode)
+    {
+        _editMode = (EditMode) mode;
+        CurrentObject = null;
+    }
    
-    
+    public void SetRotateObject()
+    {
+        if (CurrentObject == null)
+            return;
+        CurrentObject.transform.Rotate(new Vector3(0, 90, 0));
+    }
 
     private void SetMoveObject(SpaceObject obj, Vector3 pos)
     {

@@ -104,13 +104,19 @@ public class InputManager : MonoBehaviour
         CurrentPhase = TouchPhases.None;
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (!IsTouchOrClickActive())
         {
             UpdatePressedState();
             PhaseChange(TouchPhases.None);
             SpecialChange(TouchPhases.None);
+            if (IsUITouched)
+            {
+               // CurrentPhase = TouchPhases.None;
+                IsUITouched = false;
+                return;
+            }
         }
     }
 
@@ -192,21 +198,21 @@ public class InputManager : MonoBehaviour
     {
         IsUITouched = IsUITouch();
         UpdatePressedState();
-        OnLeftMouseState?.Invoke(TouchPhases.Began);
+      //  OnLeftMouseState?.Invoke(TouchPhases.Began);
         PhaseChange(TouchPhases.Began);
     }
 
     private void OnTabPerformed(InputAction.CallbackContext context)
     {
         UpdatePressedState();
-        OnLeftMouseState?.Invoke(TouchPhases.Moved);
+     //   OnLeftMouseState?.Invoke(TouchPhases.Moved);
         PhaseChange(TouchPhases.Moved);
     }
     
     private void OnTabCanceled(InputAction.CallbackContext context)
     {
         rayhit = GetRayHit(Pos);
-        OnLeftMouseState?.Invoke(TouchPhases.Ended);
+      //  OnLeftMouseState?.Invoke(TouchPhases.Ended);
         PhaseChange(TouchPhases.Ended);
     }
 
@@ -318,14 +324,9 @@ private void OnRightTabCanceled(InputAction.CallbackContext context)
 #endregion
     private void PhaseChange(TouchPhases phase)
     {
-        if (IsUITouched)
-        {
-            CurrentPhase = TouchPhases.None;
-            IsUITouched = false;
-            return;
-        }
-           
-        if(CurrentPhase != phase)
+    
+
+        if (CurrentPhase != phase)
         {
             CurrentPhase = phase;
             Debug.Log(CurrentPhase);
@@ -373,6 +374,7 @@ private void OnRightTabCanceled(InputAction.CallbackContext context)
             {
                 if (r.gameObject.layer == LayerMask.NameToLayer("UI"))
                 {
+                    Debug.Log("UI Touch");
                     return true;
                 }
             }
