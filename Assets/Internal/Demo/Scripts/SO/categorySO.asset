@@ -13,23 +13,27 @@ MonoBehaviour:
   m_Name: categorySO
   m_EditorClassIdentifier: 
   categoryModels:
-  - categoryId: 
-    name: 
-    type: 
-    thumbnailPath: 
-  - categoryId: 
-    name: 
-    type: 
-    thumbnailPath: 
-  - categoryId: 
-    name: 
-    type: 
-    thumbnailPath: 
-  - categoryId: 
-    name: 
-    type: 
-    thumbnailPath: 
-  - categoryId: 
-    name: 
-    type: 
-    thumbnailPath: 
+  - categoryId: Buildings
+    name: Buildings
+    type: 0
+    thumbnailPath: Buildings
+  - categoryId: Boxes
+    name: Box
+    type: 0
+    thumbnailPath: Boxes
+  - categoryId: Other
+    name: Other
+    type: 0
+    thumbnailPath: Other
+  - categoryId: Road_Signs
+    name: Road_Signs
+    type: 0
+    thumbnailPath: Road_Signs
+  - categoryId: Roads
+    name: Road
+    type: 0
+    thumbnailPath: Roads
+  - categoryId: Vehicles
+    name: Vehicles
+    type: 0
+    thumbnailPath: Vehicles
