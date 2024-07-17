@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,18 @@ public class ToggleCategory : MonoBehaviour
 
     public Image img;
 
-    public void SetData()
-    {
 
+    public event Action onToggle_Clicked;
+
+    public void SetData(Sprite sprite)
+    {
+        img.sprite = sprite;
     }
 
-    public void OnTgl_ValueChanged(bool isOn)
+    public void OnToggle_ValueChanged(bool isOn)
     {
-
+        if(isOn)
+            onToggle_Clicked?.Invoke();
     }
+
 }

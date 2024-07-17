@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f940db0a7e78f2c43ab5b9a5ad050138, type: 3}
+  m_Name: categorySO
+  m_EditorClassIdentifier: 
+  categoryModels:
+  - categoryId: Buildings
+    name: Buildings
+    type: 0
+    thumbnailPath: buildingicon
+  - categoryId: Boxes
+    name: Box
+    type: 0
+    thumbnailPath: boxicon
+  - categoryId: Other
+    name: Other
+    type: 0
+    thumbnailPath: othersicon
+  - categoryId: Road_Signs
+    name: Road_Signs
+    type: 0
+    thumbnailPath: Road_Signs
+  - categoryId: Roads
+    name: Road
+    type: 0
+    thumbnailPath: Roads
+  - categoryId: Vehicles
+    name: Vehicles
+    type: 0
+    thumbnailPath: Vehicles
