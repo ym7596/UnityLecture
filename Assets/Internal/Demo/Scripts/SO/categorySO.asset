@@ -16,15 +16,15 @@ MonoBehaviour:
   - categoryId: Buildings
     name: Buildings
     type: 0
-    thumbnailPath: Buildings
+    thumbnailPath: buildingicon
   - categoryId: Boxes
     name: Box
     type: 0
-    thumbnailPath: Boxes
+    thumbnailPath: boxicon
   - categoryId: Other
     name: Other
     type: 0
-    thumbnailPath: Other
+    thumbnailPath: othersicon
   - categoryId: Road_Signs
     name: Road_Signs
     type: 0
